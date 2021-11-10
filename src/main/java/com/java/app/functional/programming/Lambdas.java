@@ -37,9 +37,16 @@ public class Lambdas {
             System.out.println(a + " is String ");
             System.out.println(a + " is of length " + a.length());
         };
-        
+
+        //Practical example 2 of consumer interface
+        Consumer<String> action = (b) -> {
+            b += " 1";
+            System.out.println(b + " is String ");
+            System.out.println(b + " is of length " + b.length());
+        };
+
         print(printMany, "Example");
-        
+        print(action, "Example");
 
     }
 
