@@ -28,6 +28,23 @@ public class Lambdas {
             System.out.println(hasThreeLetters.test(w));
         }
 
+        //Consumer interface
+        Consumer<String> c = a -> System.out.println(a);
+        print(c, "hey");
+
+        //Practical example of consumer interface
+        Consumer<String> printMany = (a) -> {
+            System.out.println(a + " is String ");
+            System.out.println(a + " is of length " + a.length());
+        };
+        
+        print(printMany, "Example");
+        
+
+    }
+
+    public static void print(Consumer<String> consumer, String value) {
+        consumer.accept(value);
     }
 
 }
