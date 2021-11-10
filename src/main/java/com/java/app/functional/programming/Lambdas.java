@@ -22,10 +22,10 @@ public class Lambdas {
 
         List<String> armenianWords = Arrays.asList("shun", "door", "dog");
 
-        Predicate<String> isArmenianWord = word -> word.equalsIgnoreCase("shun");
+        Predicate<String> hasThreeLetters = word -> word.length() == 3;
 
         for (String w : armenianWords) {
-            System.out.println(isArmenianWord.test(w));
+            System.out.println(hasThreeLetters.test(w));
         }
 
     }
